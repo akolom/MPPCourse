@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.CopyController">
+	<children>
+		<Button fx:id="add" disable="true" layoutX="86.0" layoutY="65.0" mnemonicParsing="false" onAction="#handleAddCopyAction" text="Add" />
+		<Label layoutX="46.0" layoutY="29.0" prefHeight="17.0" prefWidth="40.0" text="ISBN:" />
+		<TextField fx:id="isbn" layoutX="86.0" layoutY="25.0" onKeyReleased="#handlKeyAction" />
+	</children>
+</Pane>

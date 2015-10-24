@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.printController">
+	<children>
+		<Button fx:id="print" disable="true" layoutX="86.0" layoutY="65.0" mnemonicParsing="false" onAction="#handlPrintAction" text="Print" />
+		<Label layoutX="15.0" layoutY="29.0" prefHeight="17.0" prefWidth="80.0" text="Member ID:" />
+		<TextField fx:id="member" layoutX="86.0" layoutY="25.0" onKeyReleased="#handlKeyAction" />
+	</children>
+</Pane>

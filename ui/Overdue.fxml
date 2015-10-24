@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<Pane prefHeight="450.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.OverdueController">
+	<children>
+		<TableView fx:id="table" layoutY="164.0" prefHeight="200.0" prefWidth="580.0">
+			<columns>
+				<TableColumn fx:id="isbnColumn" prefWidth="86.0" text="ISBN" />
+				<TableColumn fx:id="titleColumn" prefWidth="141.0" text="Book Title" />
+				<TableColumn fx:id="copyColumn" prefWidth="95.0" text="Copy Number" />
+				<TableColumn fx:id="memberColumn" prefWidth="151.0" text="Member" />
+				<TableColumn fx:id="dueColumn" prefWidth="62.0" text="Due Date" />
+			</columns>
+		</TableView>
+		<Label layoutX="78.0" layoutY="46.0" prefHeight="17.0" prefWidth="48.0" text="ISBN:" />
+		<TextField fx:id="bookID" layoutX="126.0" layoutY="42.0" onKeyReleased="#handleBookFieldAction" />
+		<Button fx:id="overdue" disable="true" layoutX="126.0" layoutY="80.0" mnemonicParsing="false" onAction="#handleOverdueAction" text="overdue" />
+	</children>
+</Pane>

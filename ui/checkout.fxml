@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<Pane fx:id="root" prefHeight="422.0" prefWidth="516.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.CheckoutController">
+	<children>
+		<GridPane hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="329.0" vgap="5.0">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="74.0" />
+				<ColumnConstraints hgrow="SOMETIMES" maxWidth="375.0" minWidth="10.0" prefWidth="230.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="177.0" text="Memeber ID:" />
+				<Label text="ISBN:" GridPane.rowIndex="1" />
+				<Button fx:id="checkout" disable="true" mnemonicParsing="false" onAction="#handleCheckoutAction" prefHeight="25.0" prefWidth="71.0" text="Checkout" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+				<TextField fx:id="memberID" onKeyReleased="#handleMemberFieldAction" GridPane.columnIndex="1" />
+				<TextField fx:id="isbn" onKeyReleased="#handleBookFieldAction" prefHeight="25.0" prefWidth="276.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+			</children>
+			<padding>
+				<Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+			</padding>
+		</GridPane>
+      <Pane layoutX="13.0" layoutY="154.0" prefHeight="253.0" prefWidth="481.0">
+         <children>
+            <TableView fx:id="table" prefHeight="225.0" prefWidth="481.0">
+              <columns>
+                <TableColumn fx:id="memberColumn" prefWidth="104.0" text="MemberID" >
+                 <cellValueFactory><PropertyValueFactory property="member"/></cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="isbnColumn" prefWidth="109.0" text="ISBN" >
+                 <cellValueFactory><PropertyValueFactory property="isbn"/></cellValueFactory>
+                </TableColumn>
+                  <TableColumn fx:id="copyNumColumn" prefWidth="97.0" text="Copy Number">
+                   <cellValueFactory><PropertyValueFactory property="copy"/></cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="checkoutColumn" prefWidth="86.0" text="CheckoutDate">
+                   <cellValueFactory><PropertyValueFactory property="checkout"/></cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="dueColumn" prefWidth="84.0" text="Due Date">
+                   <cellValueFactory><PropertyValueFactory property="due"/></cellValueFactory>
+                  </TableColumn>
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+	</children>
+</Pane>
